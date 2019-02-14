@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab3</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+        
+    </head>
+    <body >
+        <div class="container">
+            <h1 id="n">MyProfile</h1>
+            <div class="row">
+                <div class="col"> 
+                    <center>
+                        <img src="https://graph.facebook.com/100002017033901/picture?width=800" width="200px" id="pic" >
+                    </center>
+
+                </div>
+                <div class="col"> 
+                    <div class="jumbotron">
+                        <h1 class="display-4" id='name'>Army(อามี)</h1>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <h2>Fav sport</h2>
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Sport</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td id ="fav1">Football</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td id ="fav2">Table tennis</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td id ="fav3">Swim</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br>
+                  <p>Change Faverite sport 1 : <input type="text" id="input1"/>  <button type="button" class="btn btn-success" id="click1">change</button></p> 
+                  <p>Change Faverite sport 2 : <input type="text" id="input2"/>  <button type="button" class="btn btn-success" id="click2">change</button></p> 
+                  <p>Change Faverite sport 3 : <input type="text" id="input3"/>  <button type="button" class="btn btn-success" id="click3">change</button></p> 
+                  
+        </div>
+        
+
+    </body>
+    <script>
+            $('#name').click( ()=> {
+                $('#name').text('air')
+            })
+            $('#click1').click( ()=>{
+                $('#fav1').text($('#input1').val())
+            })
+            $('#click2').click( ()=>{
+                $('#fav2').text($('#input2').val())
+            })
+            $('#click3').click( ()=>{
+                $('#fav3').text($('#input3').val())
+            })
+            $( ()  => {
+                $("#pic").click(  () => {
+                    $("#pic").hide(2000);
+                    $("#pic").show('fast');  // slow, normal, fast
+                });
+            });
+        </script>
+
+</html>
